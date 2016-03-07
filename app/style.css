@@ -1,0 +1,128 @@
+/*
+ * Basic Styles
+ */
+* { box-sizing: border-box; }
+
+body {
+	background: #fff;
+	color: #889294;
+	font-family: -apple-system, sans-serif, arial;
+	margin: 0;
+	-webkit-app-region: drag;
+}
+
+label { 
+	font-size: 13px; 
+	text-transform: uppercase;
+}
+
+input {
+	display: block;
+	width: 160px;
+	margin-top: 12px;
+	border: none;
+	border-bottom: 1px solid #7D8689;
+	padding-bottom: 3px;
+	background: transparent;
+	font-size: 28px;
+	color: #DBE7E9;
+}
+
+	input:focus {
+		outline: none;
+		border-bottom: 1px solid #49C2EB;
+	}
+
+/*
+ * App styles
+ */
+.app {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+	.converter {
+		position: relative;
+		padding: 24px;
+		padding-top: 57px;
+		align-self: center;
+		width: 600px; 
+		background: #27282D;
+		box-shadow: 0 0 10px rgba(0,0,0,.35);
+		transition: background .5s ease;
+	}
+		.app-title-bar {
+			position: absolute;
+			top: 0;
+		    left: 0;
+			width: 100%;
+			padding: 12px 24px;
+
+		    font-size: 9px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    color: #889294; 
+
+		}
+
+		.converter__item {
+			display: inline-block;
+			margin-right: 24px; 
+		}
+
+		.converter__item:last-child { margin-right: 0 }
+
+		.total {
+			margin-top: 11px;
+			font-size: 32px;
+			color: #2EE177;
+		}
+
+/*
+ * Theme of the app
+ */
+
+/* Animation for dark and light theme (Sun&Moon) */
+.theme {
+	display: inline-block;
+	margin-left: 6px;
+	width: 11px;
+	height: 11px;
+	background: #B7C6DB;
+  	border-radius: 100%;
+  	cursor: pointer;
+  	vertical-align: bottom;
+  	-webkit-app-region: no-drag;
+  	-webkit-user-select: none;
+}
+
+.theme:after {
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  background: #FDC645;
+  border-radius: inherit;
+  transform: translateX(0);
+  transition: transform .5s cubic-bezier(0.46, 0.03, 0.52, 0.96), background .5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.theme.moon:after {
+	content: '';
+	display: block;
+	width: inherit;
+	height: inherit;
+	background: #27282D;
+	border-radius: inherit;
+	transform: translateX(-35%);
+}
+
+
+/* Sun theme */
+.converter--sun {
+	background: #F9F9F9;
+}
+
+	.converter--sun input {
+		color: #27282D;
+	}

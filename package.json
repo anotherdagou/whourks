@@ -1,0 +1,30 @@
+{
+  "name": "Whourks",
+  "version": "1.0.0",
+  "description": "Convierte Horas trabajadas en moneda (pesos)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package": "electron-packager ./ Whourks --platform=darwin --arch=all --icon=./app/icon.icns --out=build --overwrite=true"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anotherdagou/whourks"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+  ],
+  "author": "Diego Armando Catalan Tandi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atom/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/anotherdagou/whourks#readme",
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.0"
+  }
+}

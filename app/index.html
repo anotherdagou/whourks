@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Whourks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="converter">
+            <div class="app-title-bar">
+                <span class="title">Whourks</span>
+                <span class="theme moon"></span>
+            </div>
+            <div class="converter__item">
+                <label for="hourPrice">Precio por hora</label>
+                <input type="text" value="250" id="hourPrice">
+            </div>
+            <div class="converter__item">
+                <label for="time">Tiempo trabajado</label>
+                <div>
+                    <input type="text" id="time" placeholder="HH:MM"> 
+                </div>
+            </div>
+            <div class="converter__item total-wrapper">
+                <label>Total</label>
+                <div class="total">$0</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
