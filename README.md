@@ -1,11 +1,11 @@
 #Whourks
 
-Sencilla utilidad que convierte horas y minutos trabajados en moneda(pesos). Se utiliza Electron para hacer la app multiplataforma.
+Sencilla utilidad que convierte horas y minutos trabajados en moneda (pesos). Se utiliza Electron para hacer la app multiplataforma.
 
 ![](https://raw.githubusercontent.com/anotherdagou/whourks/master/app/whourks-u.png)
 
 ##Motivación 
-Todo el tiempo estoy tratando de mejorar mis habilidades básicas que tengo en Javascript. Es por eso que decidí crear algo sencillo y de utilidad para mi día a día. **Whourks** es una utilidad que permite ingresar: precio por hora, tiempo trabajado(expresado en horas y minutos) los cuales convierte a una moneda(pesos). Mi objetivo era muy básico:
+Todo el tiempo estoy tratando de mejorar mis habilidades básicas que tengo en Javascript. Es por eso que decidí crear algo sencillo y de utilidad para mi día a día. **Whourks** es una utilidad que permite ingresar: precio por hora, tiempo trabajado (expresado en horas y minutos) los cuales convierte a una moneda (pesos). Mi objetivo era muy básico:
 
 * Aprender algún patrón para modularizar mi código JS
 * Crear una utilidad que me sirviera en mi día a día
