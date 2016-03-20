@@ -6,7 +6,6 @@
   "scripts": {
     "start": "electron main.js",
     "package": "electron-packager ./ Whourks --platform=darwin --arch=all --icon=./app/icon.icns --out=build --overwrite=true"
-
   },
   "repository": {
     "type": "git",
@@ -15,7 +14,7 @@
   "keywords": [
     "Electron",
     "quick",
-    "start",
+    "start"
   ],
   "author": "Diego Armando Catalan Tandi",
   "license": "MIT",
@@ -24,7 +23,11 @@
   },
   "homepage": "https://github.com/anotherdagou/whourks#readme",
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "electron-packager": "^5.2.1",
-    "electron-prebuilt": "^0.36.0"
+    "electron-prebuilt": "^0.36.0",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.0",
+    "require-dir": "^0.3.0"
   }
 }
