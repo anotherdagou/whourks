@@ -33,6 +33,8 @@ input {
 		border-bottom: 1px solid #49C2EB;
 	}
 
+
+
 /*
  * App styles
  */
@@ -72,11 +74,91 @@ input {
 
 		.converter__item:last-child { margin-right: 0 }
 
-		.total {
+		#total,
+		#totalIva {
 			margin-top: 11px;
 			font-size: 32px;
 			color: #2EE177;
 		}
+
+
+/* 
+ * Settings App
+*/
+.settings {
+	display: inline-block;
+	position: relative;
+}
+
+	.settings > svg {
+		width: 12px;
+		height: 12px;
+		position: relative;
+		top: 2px;
+		left: 2px;
+	}
+
+		.settings > svg:hover {
+			color: #49C2EB;
+			cursor: pointer;
+		}
+
+	.settings__options {
+		display: flex;
+		width: 250px;
+		position: absolute;
+		background: #000;
+		text-align: left;
+		font-size: 9px;
+		color: #F9F9F9;
+		left: 50%;
+		transform: translate(-60%, 0px);
+		border-radius: 4px;
+		opacity: 0;
+		visibility: hidden;
+		box-shadow: 0 5px 10px rgba(0,0,0,.3);
+		transition: all .25s ease-in-out;
+	}
+
+	.settings__options:before {
+		content: '';
+		position: absolute;
+		height: 0;
+	    width: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-bottom: 10px solid #000;
+	    display: inline-block;
+	    left: 51%;
+	    transform: translate(-50%,-10px);
+	}
+
+	.settings__options--active {
+		opacity: 1;
+		visibility: visible;
+		transform: translate(-60%,20px);
+	}
+
+		.settings__options > .option {
+			flex-grow: 1;
+			padding: 12px 6px;
+		}
+
+		.settings__options > .option:last-child {
+			margin-bottom: 0px;
+		}
+			
+			.option__label {
+				color: #889294;
+			}
+
+			.option__input {
+				width: 100%;
+				font-size: 12px;
+				margin-top: 3px;
+			}
+
+
 
 /*
  * Theme of the app
@@ -85,7 +167,6 @@ input {
 /* Animation for dark and light theme (Sun&Moon) */
 .theme {
 	display: inline-block;
-	margin-left: 6px;
 	width: 11px;
 	height: 11px;
 	background: #B7C6DB;
@@ -94,9 +175,22 @@ input {
   	vertical-align: bottom;
   	-webkit-app-region: no-drag;
   	-webkit-user-select: none;
+  	transform: translate(16px,8px);
+  	text-align: center;
 }
 
 .theme:after {
+	content: '';
+	display: block;
+	width: inherit;
+	height: inherit;
+	background: #000;
+	border-radius: inherit;
+	transform: translateX(-35%);
+	transition: transform .5s cubic-bezier(0.46, 0.03, 0.52, 0.96), background .5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.theme.sun:after {
   content: '';
   display: block;
   width: inherit;
@@ -104,18 +198,11 @@ input {
   background: #FDC645;
   border-radius: inherit;
   transform: translateX(0);
-  transition: transform .5s cubic-bezier(0.46, 0.03, 0.52, 0.96), background .5s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
-.theme.moon:after {
-	content: '';
-	display: block;
-	width: inherit;
-	height: inherit;
-	background: #27282D;
-	border-radius: inherit;
-	transform: translateX(-35%);
-}
+#lightTheme { display: none; }
+
+
 
 
 /* Sun theme */
@@ -125,4 +212,8 @@ input {
 
 	.converter--sun input {
 		color: #27282D;
+	}
+
+	.converter--sun .option__input {
+		color: #DBE7E9;
 	}
