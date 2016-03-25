@@ -4,7 +4,6 @@ Sencilla utilidad que convierte horas y minutos trabajados en moneda (pesos). Se
 
 ![](https://raw.githubusercontent.com/anotherdagou/whourks/master/app/whourks-u.png)
 ![](https://raw.githubusercontent.com/anotherdagou/whourks/master/app/whourks-u-settings.png)
-Ajustes básicos 
 
 ##Motivación 
 Todo el tiempo estoy tratando de mejorar mis habilidades básicas que tengo en Javascript. Es por eso que decidí crear algo sencillo y de utilidad para mi día a día. **Whourks** es una utilidad que permite ingresar: precio por hora, tiempo trabajado (expresado en horas y minutos) los cuales convierte a una moneda (pesos). Mi objetivo era muy básico:
@@ -41,5 +40,18 @@ npm run package
 ``` 
 
 Esto generara una carpeta llamada ``build`` que contiene la app.
+
+###Changelog
+
+##0.1.2
+- Se añadió la posibilidad de añadir el Iva a los cálculos
+- Ahora se pueden guardar los settings básicos gracias a localStorage
+- Nuevo menú de settings
+- Se muestran el total trabajado con el Iva definido por el usuario
+
+## 0.1 
+- Calculo de precio en base a horas trabajadas
+- Tema claro y oscuro 
+
 
 
