@@ -68,7 +68,7 @@ var hoursConverter = (function() {
 
                     // Update Values
                     s.total.innerHTML = "$" + granTotal.toFixed(2);
-                    s.ivaBreakDown.innerHTML = "($" + granTotal * iva + ")";
+                    s.ivaBreakDown.innerHTML = "($" + (granTotal * iva).toFixed(2) + ")";
                     s.totalIva.innerHTML = "$" + granTotalIva.toFixed(2);
                 }           
             });
