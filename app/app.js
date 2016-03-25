@@ -51,12 +51,12 @@ var hoursConverter = (function() {
             _root = this;
              s = _root.settings;
 
-            _root.getPrice();
-
-            _root.loadSettings();
+             _root.loadSettings();
             _root.activeSettings();
+            _root.forceCloseSettings();
             _root.changeTheme();
             _root.updateSettings();
+            _root.getPrice();
         },
         getPrice: function() {
             s.parent.addEventListener('input', function(e){
@@ -88,6 +88,13 @@ var hoursConverter = (function() {
                 s.settingOptions.classList.toggle('settings__options--active');
             });
         },
+        forceCloseSettings: function() {
+            s.myDocument.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('geomicon') && !e.target.offsetParent.classList.contains('settings__options')) {
+                    s.settingOptions.classList.remove('settings__options--active');
+                }
+            });
+        },
         changeTheme: function() {
             s.theme.addEventListener('click', function() {
               this.classList.toggle('sun');
@@ -113,18 +120,17 @@ var hoursConverter = (function() {
                 var defaultPricePerHour = db.setItem('pricePerHour', '250');
                 var defaultIva = db.setItem('Iva', '16');
                 var defaultTheme = db.setItem('lightTheme', 'false');
+                s.lightTheme.checked = db.getItem('lightTheme'); 
                 s.pricePerHour.value = db.getItem('pricePerHour');
                 s.ivaPercent.value = db.getItem('Iva'); 
-                s.lightTheme.checked = db.getItem('lightTheme'); 
             } else {
-                s.pricePerHour.value = getPricePerHour;
-                s.ivaPercent.value = getIva;
                 if (getTheme === 'true') {
                     s.parent.classList.add('converter--sun');
                     s.theme.classList.add('sun');
                     s.lightTheme.checked = true;
                 }
-                 
+                s.pricePerHour.value = getPricePerHour;
+                s.ivaPercent.value = getIva;
             }
         },
         updateSettings: function() {

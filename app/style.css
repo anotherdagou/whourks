@@ -90,7 +90,7 @@ input {
 	position: relative;
 }
 
-	.settings > svg {
+	.settings > .geomicon {
 		width: 12px;
 		height: 12px;
 		position: relative;
@@ -98,9 +98,19 @@ input {
 		left: 2px;
 	}
 
-		.settings > svg:hover {
+		.settings > .geomicon:hover {
 			color: #49C2EB;
 			cursor: pointer;
+		}
+
+		.settings > .geomicon:after {
+			content: '';
+			width: 12px;
+			height: 12px;
+			background: rgba(0,0,0,0);
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 
 	.settings__options {
