@@ -19,10 +19,16 @@ Todo el tiempo estoy tratando de mejorar mis habilidades básicas que tengo en J
 ```
 npm install
 ```
-###Correr la aplicación en modo desarrollo 
+###Correr la aplicación en modo desarrollo de Electron
 
 ```
 npm run start
+```
+
+###Correr la aplicación en modo desarrollo en el navegador
+
+```
+gulp
 ```
 
 ###Generar aplicación
@@ -42,6 +48,9 @@ npm run package
 Esto generara una carpeta llamada ``build`` que contiene la app.
 
 ###Changelog
+
+##0.1.3
+- Reescrito el código fuente: ahora la utilidad esta escrita con React
 
 ##0.1.2
 - Se añadió la posibilidad de añadir el Iva a los cálculos
