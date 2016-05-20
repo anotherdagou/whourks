@@ -38,7 +38,7 @@ var ConverterHours = React.createClass({
 
         // Check if settings exist in localStorage
         if (!db.getItem('theme')) {
-            // Create and save default settings in localStorage
+            // Create and save default settings in localStorage 
             db.setItem('theme', theme);
             db.setItem('iva', iva);
             db.setItem('price', price);
