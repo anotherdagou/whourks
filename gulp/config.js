@@ -8,6 +8,7 @@ module.exports = {
 		open: true
 	},
 	app: {
-		src: app + '/*.*'
+		src: app + '/js/app.jsx',
+		dest: app + '/js/'
 	}
 } 

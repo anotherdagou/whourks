@@ -2,50 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Whourks</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="app">
-        <div class="converter">
-            <div class="app-title-bar">
-                <span class="title">Whourks</span>
-                <div class="settings">
-                    <div class="geomicon">
-                        <svg class="js-geomicon geomicon" data-icon="cog" viewBox="0 0 32 32" style="fill:currentcolor"><title>cog icon</title><path d="M14 0 H18 L19 6 L20.707 6.707 L26 3.293 L28.707 6 L25.293 11.293 L26 13 L32 14 V18 L26 19 L25.293 20.707 L28.707 26 L26 28.707 L20.707 25.293 L19 26 L18 32 L14 32 L13 26 L11.293 25.293 L6 28.707 L3.293 26 L6.707 20.707 L6 19 L0 18 L0 14 L6 13 L6.707 11.293 L3.293 6 L6 3.293 L11.293 6.707 L13 6 L14 0 z M16 10 A6 6 0 0 0 16 22 A6 6 0 0 0 16 10"></path></svg>
-                    </div>
-                    <div class="settings__options">
-                        <div class="option">
-                            <span class="option__label">Template</span>
-                            <span class="theme"></span>
-                            <input id="lightTheme" class="option__input" type="checkbox">
-                        </div>
-                        <div class="option">
-                            <span class="option__label">Precio x hora</span>
-                            <input id="hourPrice" class="option__input" type="number">
-                        </div>
-                        <div class="option">
-                            <span class="option__label">Iva (%)</span>
-                            <input id="iva" class="option__input" type="number">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="converter__item">
-                <label for="time">Tiempo trabajado</label>
-                <div>
-                    <input type="text" id="time" placeholder="HH:MM"> 
-                </div>
-            </div>
-            <div class="converter__item total-wrapper">
-                <label>Total</label>
-                <div id="total">$0.00</div>
-            </div>
-             <div class="converter__item total-wrapper">
-                <label>Total + Iva <span id="ivaBreakDown"></span></label>
-                <div id="totalIva">$0.00</div>
-            </div>
-        </div>
-    </div>
-    <script src="app.js"></script>
+    <div class="app"></div>
+    <script src="js/bundle.js"></script>
 </body>
 </html>

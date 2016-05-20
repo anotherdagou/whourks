@@ -176,7 +176,7 @@ input {
 
 /* Animation for dark and light theme (Sun&Moon) */
 .theme {
-	display: inline-block;
+	display: block;
 	width: 11px;
 	height: 11px;
 	background: #B7C6DB;
